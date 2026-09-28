@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#142c2a" />
+    <title>Laireth | Elvish translator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="Laireth home">
+          <span class="brand-mark" aria-hidden="true">L</span>
+          <span>LAIRETH</span>
+        </a>
+        <div class="topbar-meta"><span class="status-dot"></span> Phrase studio <span class="divider"></span> v0.1</div>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <p class="eyebrow">A small bridge between worlds</p>
+          <h1 id="page-title">Say it in <em>Elvish.</em></h1>
+          <p class="intro-copy">Shape a thought in English, then give it a little starlight. Choose a language and explore an illustrative translation.</p>
+        </section>
+
+        <section class="translator" aria-label="Translation workspace">
+          <div class="workspace-head">
+            <div>
+              <p class="section-label">Translation workspace</p>
+              <h2>What would you like to say?</h2>
+            </div>
+            <div class="language-picker" role="group" aria-label="Choose an Elvish language">
+              <button class="language-button is-active" data-language="quenya" type="button">Quenya <span>Q</span></button>
+              <button class="language-button" data-language="sindarin" type="button">Sindarin <span>S</span></button>
+            </div>
+          </div>
+
+          <div class="translation-grid">
+            <article class="text-panel source-panel">
+              <div class="panel-topline"><span class="panel-label">English</span><span class="panel-index">01</span></div>
+              <textarea id="source-text" maxlength="240" placeholder="Type a phrase to begin..." spellcheck="true">The stars are beautiful tonight.</textarea>
+              <div class="panel-footer"><span id="character-count">33 / 240</span><button class="text-button" id="clear-button" type="button">Clear <span aria-hidden="true">&#215;</span></button></div>
+            </article>
+
+            <div class="connector" aria-hidden="true"><span class="connector-line"></span><span class="connector-icon">&#8594;</span><span class="connector-line"></span></div>
+
+            <article class="text-panel result-panel">
+              <div class="panel-topline"><span class="panel-label" id="result-language">Quenya</span><span class="panel-index">02</span></div>
+              <div class="result-content" id="result-text" aria-live="polite">I eleni ná quanta</div>
+              <div class="panel-footer"><span class="confidence"><span class="confidence-dot"></span>Illustrative phrase</span><button class="text-button" id="copy-button" type="button">Copy <span aria-hidden="true">&#8599;</span></button></div>
+            </article>
+          </div>
+
+          <div class="action-row"><p class="hint"><span class="hint-key">Tip</span> Try one of the phrases below</p><button class="translate-button" id="translate-button" type="button">Translate <span aria-hidden="true">&#8594;</span></button></div>
+        </section>
+
+        <section class="phrases" aria-labelledby="phrases-title">
+          <div class="phrases-heading"><div><p class="section-label">Start with a thought</p><h2 id="phrases-title">Try a phrase</h2></div><p class="phrases-note">Curated for curious minds</p></div>
+          <div class="phrase-list">
+            <button class="phrase-card" data-phrase="The stars are beautiful tonight." type="button"><span class="phrase-number">01</span><span class="phrase-text">The stars are beautiful tonight.</span><span class="phrase-arrow">&#8599;</span></button>
+            <button class="phrase-card" data-phrase="I love you." type="button"><span class="phrase-number">02</span><span class="phrase-text">I love you.</span><span class="phrase-arrow">&#8599;</span></button>
+            <button class="phrase-card" data-phrase="A friend is a gift." type="button"><span class="phrase-number">03</span><span class="phrase-text">A friend is a gift.</span><span class="phrase-arrow">&#8599;</span></button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer"><span>Made for the moonlit curious.</span><span>Languages are living things.</span></footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
